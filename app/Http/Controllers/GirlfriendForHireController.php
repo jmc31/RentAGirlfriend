@@ -3,16 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\GirlfriendForHire;  // Use your existing model
+use App\Models\GirlfriendForHire;
 
 class GirlfriendForHireController extends Controller
 {
-    // Fetch all GirlfriendForHire records
+
     public function index()
     {
-        $girlfriends = GirlfriendForHire::all();  // Fetch all the records
+        $girlfriends = GirlfriendForHire::all();
 
-        // Pass the data to the view
+
         return view('girlfriend-for-hire', compact('girlfriends'));
 
     }
@@ -46,14 +46,21 @@ class GirlfriendForHireController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'age' => 'required|integer',
+            'address' => 'required|string|max:255',
+            'contact_no' => 'required|string|max:15',
             'description' => 'required|string',
         ]);
 
+
         $girlfriend = GirlfriendForHire::findOrFail($id);
+
+
         $girlfriend->update($request->all());
 
-        return redirect()->route('girlfriend-for-hire.index');
+
+        return redirect()->route('girlfriend-for-hire.index')->with('success', 'Girlfriend details updated successfully!');
     }
+
 
     public function destroy($id)
     {

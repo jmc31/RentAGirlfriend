@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('girlfriend_for_hires', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->text('description')->nullable();
             $table->integer('age');
+            $table->string('address')->nullable();
+            $table->string('contact_no')->nullable();
+            $table->text('description')->nullable();
             $table->decimal('rate_per_hour', 8, 2);
             $table->timestamps();
         });
