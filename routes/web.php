@@ -27,6 +27,7 @@ Route::get('/girlfriends/{id}/edit', GirlfriendForHireEdit::class)->name('girlfr
 Route::get('/rent-a-girl', [GirlfriendForHireController::class, 'index'])->name('rent-a-girl');
 Route::delete('/rent-a-girl/{id}', [GirlfriendForHireController::class, 'destroy'])->name('rent-a-girl.destroy');
 
+//controller for girlfriend for hire
 Route::resource('girlfriend-for-hire', GirlfriendForHireController::class);
 
 

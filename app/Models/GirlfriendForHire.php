@@ -10,6 +10,6 @@ class GirlfriendForHire extends Model
     /** @use HasFactory<\Database\Factories\GirlfriendForHireFactory> */
     use HasFactory;
 
-    protected $fillable = ['name', 'age','address','contact_no', 'description', 'rate_per_hour'];
+    protected $fillable = ['name', 'age','address','contact_no', 'description', 'status','rate_per_hour'];
 
 }

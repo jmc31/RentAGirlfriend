@@ -33,6 +33,11 @@
             <label class="text-sm font-medium text-gray-500 dark:text-gray-400">Description</label>
             <p class="mt-1 text-lg text-gray-800 dark:text-gray-200">{{ $girlfriend->description }}</p>
         </div>
+        {{-- status --}}
+        <div>
+            <label class="text-sm font-medium text-gray-500 dark:text-gray-400">Status</label>
+            <p class="mt-1 text-lg font-semibold text-gray-800 dark:text-gray-200">{{ $girlfriend->status }}</p>
+        </div>
 
         <div class="mb-6">
             <label class="text-sm font-medium text-gray-500 dark:text-gray-400">Rate Per Hour</label>

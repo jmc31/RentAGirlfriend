@@ -59,6 +59,18 @@
             @enderror
         </div>
 
+        {{-- status --}}
+        <div class="mb-4">
+            <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
+            <input type="text" id="status" name="status" value="{{ old('status', $girlfriend->status) }}"
+                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                required>
+            @error('status')
+                <p class="text-red-600 text-sm">{{ $message }}</p>
+            @enderror
+        </div>
+
+
         <div class="mb-4">
             <label for="rate_per_hour" class="block text-sm font-medium text-gray-700">Rate per Hour</label>
             <input type="number" id="rate_per_hour" name="rate_per_hour"

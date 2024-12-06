@@ -13,6 +13,7 @@
                     <th>Address</th>
                     <th>Contact No</th>
                     <th>Description</th>
+                    <th>Status</th>
                     <th>Rate per Hour</th>
                     <th>Actions</th>
                 </tr>
@@ -26,9 +27,12 @@
                         <td>${{ $girlfriend->contact_no }}</td>
                         <td>{{ $girlfriend->description }}</td>
                         <td>${{ $girlfriend->rate_per_hour }}</td>
+                        {{-- status --}}
+                        <td>${{ $girlfriend->status }}</td>
                         <td>
                             <a href="{{ route('girlfriend-for-hire.show', $girlfriend->id) }}">View</a>
                             <a href="{{ route('girlfriend-for-hire.edit', $girlfriend->id) }}">Edit</a>
+                            {{-- <a href="{{ route('girlfriend-for-hire.rent', $girlfriend->id) }}">Rent</a> --}}
                             <form action="{{ route('girlfriend-for-hire.destroy', $girlfriend->id) }}" method="POST"
                                 style="display:inline;">
                                 @csrf

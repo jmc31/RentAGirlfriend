@@ -28,6 +28,10 @@
                 <label for="description" class="block text-sm font-medium text-gray-700">Description</label>
                 <textarea id="description" name="description" class="mt-1 block w-full" required></textarea>
             </div>
+            <div class="mb-4">
+                <label for="status" class="block text-sm font-medium text-gray-700">Status</label>
+                <input type="text" id="status" name="status" class="mt-1 block w-full" required>
+            </div>
             <div class="form-group">
                 <label for="rate_per_hour">Rate Per Hour</label>
                 <input type="number" name="rate_per_hour" id="rate_per_hour" class="form-control" step="0.01" required>

@@ -10,7 +10,7 @@ class GirlfriendForHireController extends Controller
 
     public function index()
     {
-        $girlfriends = GirlfriendForHire::all();
+        $girlfriends = GirlfriendForHire::paginate(10);
 
 
         return view('girlfriend-for-hire', compact('girlfriends'));
