@@ -22,7 +22,7 @@
             </div>
             <div class="mb-4">
                 <label for="contact_no" class="block text-sm font-medium text-gray-700">Contact No</label>
-                <input type="number" id="contact_no" name="contact_no" class="mt-1 block w-full" required>
+                <input type="text" id="contact_no" name="contact_no" class="mt-1 block w-full" required>
             </div>
             <div class="mb-4">
                 <label for="description" class="block text-sm font-medium text-gray-700">Description</label>

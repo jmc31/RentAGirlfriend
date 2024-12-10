@@ -20,7 +20,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-// controller routes
+// index create edit delete
 Route::get('/girlfriends', GirlfriendForHireIndex::class)->name('girlfriend.index');
 Route::get('/girlfriends/create', GirlfriendForHireCreate::class)->name('girlfriend.create');
 Route::get('/girlfriends/{id}/edit', GirlfriendForHireEdit::class)->name('girlfriend.edit');
